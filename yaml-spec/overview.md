@@ -1,27 +1,16 @@
 # YAML Specification
 
-The StyxCD YAML specification defines the contract between a workflow author and the StyxCD orchestrator.
+The StyxCD YAML specification describes the desired workflow state.
 
-The specification describes:
-
-- Workflow structure
-- Release metadata
-- Applications
-- Environments
-- Platform configuration
-
-## Philosophy
-
-The YAML specification is intentionally human-readable.
-
-A workflow should describe the desired outcome, while StyxCD determines the execution plan.
-
-## Example
+A workflow author describes what should exist, what should be built, and where it should run. StyxCD turns that YAML into an execution plan.
 
 ```yaml
 workflow: cloud_workflow
-
-release:
-  name: hello-world
-  version: 0.1.0
 ```
+
+The current core areas are:
+
+- `workflow`
+- `release`
+- `applications`
+- `environments`
